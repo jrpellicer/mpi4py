@@ -27,7 +27,7 @@ Creamos en el nodo maestro el fichero *machinefile* que contendrá la lista de l
 ## Ejecución de los programas
 Ejecutamos los programas especificando el fichero *machinefile* y la ruta de los programas. Indicamos el número de procesos o si queremos un proceso por nodo.
 
-    mpiexec -np 3  -machinefile machinefile python ~/helloworld.py
-    mpiexec -pernode  -machinefile machinefile python ~/helloworld.py
+    mpiexec -np 3  -machinefile machinefile python helloworld.py
+    mpiexec -pernode  -machinefile machinefile python helloworld.py
     
-    mpiexec -np 8 -machinefile ~/machinefile python primos.py 10000
+    mpiexec -np 8 -machinefile machinefile python primos.py 10000
