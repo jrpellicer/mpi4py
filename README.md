@@ -1,5 +1,5 @@
 # mpi4py
-Programas de demo para ejecutar MPI en Python
+Programas de demo para ejecutar MPI en Python en Ubuntu y Raspbian (clúster de RPi)
 
 ## Instalación de mpi4py
 Para poder ejecutar los programas de demo en Python es necesario instalar las librerías mpi4py y numpy. 
@@ -19,7 +19,7 @@ Copiamos la clave pública del usuario desde el nodo maestro a los esclavos:
     cat ~/.ssh/id_rsa.pub | ssh usuario@X.X.X.X "cat >> .ssh/authorized_keys"
 
 ## Copia de los ficheros en el maestro y el resto de los nodos
-Clonamos el repositorio en cada uno de los nodos dentro del directorio mpi4py
+Clonamos el repositorio en cada uno de los nodos dentro del directorio *mpi4py*
 
 ## Creación del machinefile
 Creamos en el nodo maestro el fichero *machinefile* que contendrá la lista de los nodos (incluido el maestro) donde se ejecutarán los procesos.
