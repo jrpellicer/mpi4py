@@ -34,7 +34,7 @@ for i in range(ini, fin+1):
         # El numero que estabamos comprobando es primo
         primos=primos + 1
 
-print "El Proceso %d de %d en %s ha encontrado %d primos entre el %d y el %d" %(rank,size,name,primos, ini, fin)
+print ("El Proceso %d de %d en %s ha encontrado %d primos entre el %d y el %d" %(rank,size,name,primos, ini, fin))
 
 comm.Barrier()
 
@@ -49,6 +49,6 @@ comm.Reduce([sub_total, MPI.INT], [total, MPI.INT], op = MPI.SUM, root=0)
 comm.Barrier()
 
 if rank==0:
-    print "Total de primos encontrados hasta el %d: %d" %(x,total)
-    print "Total time: %fs" %(MPI.Wtime()-start)
+    print ("Total de primos encontrados hasta el %d: %d" %(x,total))
+    print ("Total time: %fs" %(MPI.Wtime()-start))
 
